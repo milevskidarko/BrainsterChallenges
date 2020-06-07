@@ -1,0 +1,494 @@
+body {
+  margin: 0;
+  font-family: "Ubuntu Mono", monospace;
+}
+.menu {
+  width: 80%;
+  margin: 0 auto;
+}
+.parent {
+  display: flex;
+  justify-content: space-between;
+}
+.parent1 {
+  position: relative;
+  transition: 0.4 ease-out;
+}
+.menu-but {
+  display: none;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: 0px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.submenu2 {
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: 0px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.submenu3 {
+  display: none;
+  position: absolute;
+  background: #fff;
+  left: 0px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.right li {
+  display: inline-block;
+  position: relative;
+}
+.submenu li {
+  display: block;
+}
+ul li:hover ul {
+  display: block;
+}
+.left p a {
+  font-weight: bold;
+  color: rgb(48, 47, 47);
+  font-size: 20px;
+}
+a {
+  list-style-type: none;
+  color: rgb(48, 47, 47);
+  text-decoration: none;
+  font-size: 12px;
+}
+/* --------------------------------- */
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  height: calc(100vh - 54px);
+}
+.h1 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+.but {
+  margin: 25px 0;
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* second  */
+
+.second {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 70px 50px;
+  text-align: center;
+  color: white;
+}
+.box {
+  flex-basis: 20%;
+  background-color: rgb(255, 84, 68);
+  padding: 30px 0;
+}
+.box2 {
+  flex-basis: 20%;
+  background-color: rgb(170, 45, 182);
+  padding: 30px 0;
+}
+.box3 {
+  flex-basis: 20%;
+  background-color: rgb(170, 45, 182);
+  padding: 30px 0;
+}
+.box4 {
+  flex-basis: 20%;
+  background-color: rgb(170, 45, 182);
+  padding: 30px 0;
+}
+
+/* third  */
+
+.third {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(246, 246, 246);
+}
+
+.three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.top {
+  flex-basis: 40%;
+  text-align: center;
+  padding-top: 80px;
+}
+.top ul li:first-child {
+  background-color: black;
+}
+.a {
+  display: inline-block;
+  list-style-type: none;
+  color: rgb(48, 47, 47);
+  padding: 10px 5px;
+  background-color: lightgray;
+  transition: color 0.3 ease-out;
+}
+.a a:hover {
+  color: white;
+  background-color: black;
+}
+
+.innerimg {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+}
+.card-up {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.card {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card2 {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.card .card2 .card3 .card4 .card5 .card6 {
+  border: 1px solid white;
+  transition: border 0.3s ease-out;
+}
+
+
+/* HOVER NE CINI  */
+.card:hover {
+  cursor: pointer;
+  background: solid black;
+}
+.card2:hover {
+  background: black;
+  cursor: pointer;
+}
+.card3:hover {
+  background: black;
+  cursor: pointer;
+}
+.card4:hover {
+  background: black;
+  cursor: pointer;
+}
+.card5:hover {
+  background: black;
+  cursor: pointer;
+}
+.card6:hover {
+  background: black;
+  cursor: pointer;
+}
+.card3 {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.card4 {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.card5 {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.card6 {
+  flex-basis: 25%;
+  position: relative;
+  box-shadow: -1px 10px 23px 0px rgba(0, 0, 0, 0.75);
+}
+.incard p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
+
+.incard2 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
+.incard3 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+}
+.card-down {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.innerimg img {
+  width: 100%;
+}
+.innerimg2 img {
+  width: 100%;
+}
+.incard p {
+  padding: 25px 0;
+}
+.incard2 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+.incard3 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+
+.incard4 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+.incard5 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+.incard6 p {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  background-color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+
+.innerimg2 {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* fourth  */
+
+.fourth {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.fourth-in {
+  text-align: center;
+}
+
+.border {
+  width: 7%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.arow {
+  margin: 0 auto;
+  display: flex;
+  margin-left: 100px;
+}
+.arrow {
+  flex-basis: 33.3333%;
+}
+.arrow1 {
+  flex-basis: 33.3333%;
+}
+
+.arrow2 {
+  flex-basis: 33.3333%;
+}
+
+.arrow-in {
+  padding: 20px 0;
+  font-size: 18px;
+}
+
+/* five  */
+.section5 {
+  background-color: #464646;
+  text-align: center;
+  padding: 50px 0;
+}
+.section5-inner {
+  color: white;
+}
+.social a {
+  color: white;
+  font-size: 25px;
+  transition: color 0.3 ease-out;
+}
+.social a:hover {
+  color: rgb(45, 45, 45);
+}
+
+/* sest  */
+.six {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px 50px;
+}
+
+.copy {
+  flex-basis: 50%;
+}
+
+.create {
+  flex-basis: 50%;
+}
+.create p {
+  text-align: right;
+}
+
+@media (max-width: 425px) {
+  .right ul {
+    display: none;
+  }
+  .menu-but {
+    position: relative;
+    justify-content: right;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-burger {
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    background: black;
+  }
+
+  .menu-burger::before,
+  .menu-burger::after {
+    position: absolute;
+    content: " ";
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    background: black;
+  }
+
+  .menu-burger::before {
+    transform: translateY(-10px);
+  }
+  .menu-burger::after {
+    transform: translateY(10px);
+  }
+
+  .inner {
+    width: 70%;
+  }
+  .second {
+    flex-direction: column;
+    padding: 70px 75px;
+  }
+  .box,
+  .box2,
+  .box3,
+  .box4 {
+    margin-bottom: 10px;
+  }
+  .three {
+    display: block;
+  }
+  .innerimg,
+  .innerimg2 {
+    flex-direction: column;
+  }
+  .card,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    margin-bottom: 20px;
+  }
+  .card-down {
+    padding: 0;
+  }
+  .fourth {
+    margin-top: 50px;
+  }
+  .arow {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  .six {
+    font-size: 6px;
+  }
+}
