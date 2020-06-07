@@ -1,0 +1,284 @@
+body {
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.first {
+  background-image: url(hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+.overplay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.left {
+  flex-basis: 50%;
+  text-align: left;
+}
+.left a,
+.right a {
+  color: white;
+  text-decoration: none;
+}
+.right {
+  flex-basis: 50%;
+  text-align: right;
+}
+.left ul li,
+.right ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+.right ul li {
+  padding: 0 10px;
+}
+.left ul {
+  padding: 0;
+}
+.main {
+  text-align: center;
+  padding-top: 200px;
+}
+.button {
+  color: white;
+  border: none;
+  background-color: rgb(57, 139, 246);
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* second  */
+.second {
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.second-in {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.border {
+  width: 10%;
+  border: 1px solid rgb(57, 139, 246);
+  margin: 0 auto;
+}
+/* third  */
+.third {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.third-in {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.space {
+  margin-right: 20px;
+}
+.card {
+  flex-basis: 40%;
+  background-image: url(coast.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  background-position: center;
+}
+.card1 {
+  flex-basis: 60%;
+  background-image: url(island.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  background-position: center;
+}
+
+.third-in1 {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card2 {
+  flex-basis: 60%;
+  background-image: url(balloon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  background-position: center;
+}
+.card3 {
+  flex-basis: 40%;
+  background-image: url(mountain.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  background-position: center;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/* fourth  */
+
+.fourth {
+  background-color: rgb(246, 246, 246);
+  padding: 10px 30px;
+}
+.fourth-in {
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+  padding: 25px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fourthin {
+  display: flex;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.border1 {
+  width: 30%;
+  border: 1px solid rgb(57, 139, 246);
+  margin: 0 auto;
+}
+.left1,
+.mid,
+.right2 {
+  text-align: center;
+  flex-basis: 33.33%;
+}
+i {
+  font-size: 50px;
+  color: rgb(57, 139, 246);
+}
+.down {
+  text-align: center;
+  padding: 40px 0;
+}
+.input {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* five  */
+.five {
+  background-color: #464646;
+  text-align: center;
+  padding: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.five a i {
+  color: white;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.five p {
+  color: rgb(209, 208, 208);
+}
+
+/* TABLET DEVICES  */
+
+@media (max-width: 768px) {
+  .first {
+    margin: 0 auto;
+  }
+  .second-in {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .third-in,
+  .third-in1 {
+    display: block;
+  }
+  .space {
+    margin-bottom: 10px;
+  }
+  .border {
+    width: 20%;
+  }
+  .fourth-in {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .fourthin {
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .down .input {
+    width: 80%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* MOBILE  */
+
+@media (max-width: 425px) {
+  .nav {
+    flex-direction: column;
+    font-size: 20px;
+    width: 100%;
+  }
+  .left,
+  .right {
+    margin: 0 auto;
+  }
+  .right ul {
+    padding: 0;
+  }
+  .right ul li {
+    padding: 0 20px;
+  }
+  .main {
+    font-size: 25px;
+    padding-top: 30px;
+  }
+  .second-in {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .border1 {
+    margin-bottom: 20px;
+  }
+  .fourthin {
+    width: 90%;
+  }
+  .down .button {
+    width: 35%;
+  }
+  .left1,
+  .mid,
+  .right2 {
+    margin-bottom: 20px;
+  }
+  .fourth-in {
+    padding: 0;
+  }
+  .five-in {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
