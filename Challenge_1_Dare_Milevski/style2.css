@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+/* Div prv  */
+.first {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(image1.jpg);
+  position: relative;
+}
+.color {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px 80px;
+}
+.h1 {
+ 
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.second {
+  
+  text-align: center;
+  height: 40vh;
+  padding: 50px;
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* div vtor  */
+
+.third {
+  width: 100%;
+  height: 60vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(image2.jpg);
+  position: relative;
+}
+.color2 {
+  width: 100%;
+  height: 60vh;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.h2 {
+  width: 20%;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.fourth {
+  width: 100%;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 40vh;
+  padding: 50px;
+  font-size: 20px;
+}
+
+/* div tret  */
+
+.fifth {
+  width: 100%;
+  height: 60vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(image3.jpg);
+  position: relative;
+}
+.h3 {
+  width: 20%;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  text-transform: uppercase;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.six {
+  width: 100%;
+  background-color: black;
+  color: white;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 40vh;
+  padding: 50px;
+  font-size: 20px;
+}
+
+/* div cetvrt  */
+
+.seven {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(image1.jpg);
+  position: relative;
+}
+.h4 {
+  width: 20%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+
+
+
+@media (max-width: 425px ) {
+  .h1 {
+    width: 50%;
+    margin-left: 80px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 425px ) {
+  .h4 {
+    width: 50%;
+    margin-left: 80px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 425px ) {
+  .second {
+    width: 100%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 425px ) {
+  .fourth {
+    width: 100%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 425px ) {
+  .six {
+    width: 100%;
+    font-size: 11px;
+  }
+}
