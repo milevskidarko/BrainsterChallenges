@@ -1,0 +1,138 @@
+.left {
+  text-align: left;
+}
+.parent {
+  display: flex;
+  padding: 0;
+}
+.menu {
+  height: 100vh;
+  flex-basis: 20%;
+  padding-left: 20px;
+}
+.fixed {
+  position: fixed;
+}
+.right {
+  flex-basis: 80%;
+}
+.hamburger {
+  display: none;
+}
+.menu .fixed .left img {
+  width: 100%;
+  display: block;
+  margin: 60px 0;
+}
+.left h1 {
+  font-size: 25px;
+  margin: 50px 0;
+}
+.left ul {
+  padding: 0;
+}
+.left ul li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+.left ul li a {
+  text-decoration: none;
+  color: silver;
+  font-size: 15px;
+}
+.left ul li a:hover {
+  color: lightgrey;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.right .pic {
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.right .pic .block .col {
+  display: none;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .pic:hover .block .col {
+  display: flex;
+  background-color: white;
+}
+.parent .sliki {
+  padding: 0;
+}
+.social {
+  margin-top: 150px;
+}
+.parent .menu .fixed .social a {
+  font-size: 20px;
+  padding: 5px 5px;
+  border: 1px solid silver;
+  color: silver;
+}
+.parent .menu .fixed .social a:first-child:hover {
+  color: blue;
+}
+.parent .menu .fixed .social a:nth-child(2):hover {
+  color: orange;
+}
+.parent .menu .fixed .social a:nth-child(3):hover {
+  color: blue;
+}
+.parent .menu .fixed .social a:nth-child(4):hover {
+  color: orangered;
+}
+.social p {
+  font-size: 10px;
+  margin: 0;
+}
+.parent .menu .fixed .social a i {
+  margin-bottom: 20px;
+}
+
+/* Media  */
+
+@media (max-width: 768px) {
+  .parent {
+    display: block;
+  }
+  .menu .fixed .row .left ul {
+    display: none;
+  }
+  .menu .fixed .social {
+    display: none;
+  }
+  .menu {
+    height: 100px;
+    padding: 0;
+  }
+  .menu .fixed {
+    position: relative;
+    padding: 20px 20px;
+  }
+  .menu .fixed .left {
+    display: flex;
+    font-size: 25px;
+  }
+  .menu .fixed .left img {
+    width: 50%;
+    display: block;
+    margin: 0;
+  }
+  .hamburger {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: silver;
+  }
+}
