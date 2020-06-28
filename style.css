@@ -1,0 +1,23 @@
+body {
+  padding-top: 56px;
+}
+section.container-fluid {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.medium {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .block {
+    display: none;
+  }
+  .form {
+    margin: 0 auto;
+    flex-basis: 80%;
+  }
+  .medium {
+    flex-direction: column;
+  }
+}
