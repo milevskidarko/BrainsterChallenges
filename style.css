@@ -1,0 +1,37 @@
+.mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+i {
+  font-size: 30px !important;
+}
+#i {
+  font-size: 15px !important;
+}
+.black {
+  background-color: black !important;
+}
+.carousel-caption {
+  top: 50%;
+  bottom: auto !important;
+  transform: translateY(-50%);
+}
+.footer {
+  background-color: black;
+}
+.btn-link {
+  text-decoration: none !important;
+}
+
+/* MEDIA  */
+
+@media (max-width: 768px) {
+  .about {
+    height: 300px !important;
+    margin-top: -100px;
+  }
+  .acord {
+    margin: 0 50px !important;
+  }
+}
