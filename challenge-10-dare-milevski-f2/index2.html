@@ -11,7 +11,33 @@
   <body>
     <!-- Vezba 3  -->
     <script>
-        
+      //         3: Од дадени 3 броеви, најдете го најмалиот и најголемиот, и проверете дали тие се
+      // прости.
+      // Пр:
+      // Num = 13;
+      // Num2 = 15;
+      // Num3 = 20;
+      // Najmal - 13, najgolem -20
+      // Najmaliot broj 13 e prost,
+      // Najgolemiot broj 20 e slozen
+
+      let arr = [12, 22, 85];
+      let minvalue = arr[0];
+      let largest = arr[0];
+
+      for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] > largest) {
+          largest = arr[i];
+        }
+      }
+      console.log(`Brojot ${largest} e najgolem`);
+
+      for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] < minvalue) {
+          minvalue = arr[i];
+        }
+      }
+      console.log(`Brojot ${minvalue} e najmal`);
     </script>
   </body>
 </html>
