@@ -11,33 +11,49 @@
   <body>
     <!-- Vezba 3  -->
     <script>
-      //         3: Од дадени 3 броеви, најдете го најмалиот и најголемиот, и проверете дали тие се
-      // прости.
-      // Пр:
-      // Num = 13;
-      // Num2 = 15;
-      // Num3 = 20;
-      // Najmal - 13, najgolem -20
-      // Najmaliot broj 13 e prost,
-      // Najgolemiot broj 20 e slozen
-
-      let arr = [12, 22, 85];
+      let arr = [16, 22, 85];
       let minvalue = arr[0];
       let largest = arr[0];
+      function isprime(number) {
+        if (number == 2 || number == 3) {
+          return true;
+        }
+        if (number < 2 || number % 2 === 0) {
+          return false;
+        } else {
+          for (let i = 3; i <= number / 2; i++) {
+            if (number % i === 0) {
+              return false;
+            }
+          }
+        }
+        return true;
+      }
 
       for (let i = 0; i <= arr.length; i++) {
-        if (arr[i] > largest) {
+        if (arr[i] > largest && arr[i] % 1 == 0) {
           largest = arr[i];
         }
       }
-      console.log(`Brojot ${largest} e najgolem`);
 
       for (let i = 0; i <= arr.length; i++) {
         if (arr[i] < minvalue) {
           minvalue = arr[i];
         }
       }
-      console.log(`Brojot ${minvalue} e najmal`);
+
+      console.log(`Najmal - ${minvalue}, najgolem ${largest}`);
+      if (isprime(minvalue)) {
+        console.log(`Najmaliot broj ${minvalue} e prost`);
+      } else {
+        console.log(`Najmaliot broj ${minvalue} e slozen`);
+      }
+
+      if (isprime(largest)) {
+        console.log(`Najgolemiot broj ${largest} e prost`);
+      } else {
+        console.log(`Najgolemiot broj ${largest} e slozen`);
+      }
     </script>
   </body>
 </html>
