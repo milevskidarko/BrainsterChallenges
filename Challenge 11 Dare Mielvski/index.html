@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dare</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt("Enter your name");
+      let found = -1;
+      let arr = [
+        ["Antonio", true, 5],
+        ["Marija", false],
+        ["Darko", true, 3],
+      ];
+      let table = "";
+      function myFunction() {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i][0].toLowerCase() === name.toLowerCase()) {
+            found = i;
+            console.log(arr[i]);
+            table += "<table border='1'><tr>";
+            for (let c = 0; c < arr[i].length; c++) {
+              if (arr[i][c] === true) {
+                arr[i][c] = "Voted!";
+              } else if (arr[i][c] === false) {
+                arr[i][c] = "No Voted!";
+              }
+              table += "<td>" + arr[i][c] + "</td>";
+            }
+            table += "</tr></table>";
+            document.write(table);
+            break;
+          }
+        }
+      }
+      myFunction();
+      if (found === -1) {
+        document.body.innerHTML = `Ne e pronajden zapis vo nizata za: ${name}`;
+      }
+    </script>
+  </body>
+</html>
