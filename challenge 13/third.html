@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third exersize</title>
+  </head>
+  <body>
+    <input type="text" id="from" />
+    <input type="text" id="to" />
+    <input type="text" id="subject" />
+    <input type="text" id="message" />     
+    <script>
+
+class Email {
+  constructor(from, to, subject, message) {
+    this.from = from;
+    this.to = to;
+    this.subject = subject;
+    this.message = message;
+  }
+  login() {
+  alert(`From : ${from.value}, To : ${to.value}, Subject : ${subject.value}, Message : ${message.value}`);
+  }
+}
+let from = document.getElementById('from');
+let to = document.getElementById('to');
+let subject = document.getElementById('subject');
+let message = document.getElementById('message');
+
+from.value = prompt("From");
+to.value = prompt("To");
+subject.value = prompt("Subject");
+message.value = prompt("Message");
+
+let email = new Email(from, to, subject, message);
+email.login();
+
+
+    </script>
+  </body>
+</html>
