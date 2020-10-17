@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third exersize</title>
+
+    <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row bg-success py-5 vh-100">
+        <div class="col-4 offset-4 py-4 px-4 h-75 rounded bg-white">
+          <label for="text1" class="font-weight-bold">From:</label>
+          <input type="text" id="from" class="form-control mb-3 border-dark" />
+          <label for="text2" class="font-weight-bold">To:</label>
+          <input type="text" id="to" class="form-control mb-3 border-dark" />
+          <label for="text3" class="font-weight-bold">Subject:</label>
+          <input
+            type="text"
+            id="subject"
+            class="form-control mb-3 border-dark"
+          />
+          <label for="textarea" class="font-weight-bold">Message:</label>
+          <textarea
+            name=""
+            id="message"
+            cols="30"
+            rows="5"
+            class="form-control border-dark mb-5"
+          ></textarea>
+          <button
+            class="btn border-dark bg-success btn-block font-weight-bold text-white"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Latest Font-Awesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jQuery library -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Latest Compiled Bootstrap 4.4.1 JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      class Email {
+        constructor(from, to, subject, message) {
+          this.from = from;
+          this.to = to;
+          this.subject = subject;
+          this.message = message;
+        }
+        login() {
+          alert(
+            `From : ${from.value}, To : ${to.value}, Subject : ${subject.value}, Message : ${message.value}`
+          );
+        }
+      }
+      let from = document.getElementById("from");
+      let to = document.getElementById("to");
+      let subject = document.getElementById("subject");
+      let message = document.getElementById("message");
+
+      from.value = prompt("From");
+      to.value = prompt("To");
+      subject.value = prompt("Subject");
+      message.value = prompt("Message");
+
+      let email = new Email(from, to, subject, message);
+      email.login();
+    </script>
+  </body>
+</html>
