@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 14</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #ad4d44;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 15px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 offset-3">
+          <ul id="first"></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-3">
+          <ul id="second"></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-2">
+          <table class="table table-dark"></table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9 offset-3">
+          <label class="font-weight-bold">Title</label>
+          <input type="text" id="titleInput" />
+          <label class="font-weight-bold">Author</label>
+          <input type="text" id="authorInput" />
+          <label class="font-weight-bold">Maxpage</label>
+          <input type="text" id="maxPageInput" />
+          <label class="font-weight-bold">OnPage</label>
+          <input type="text" id="onPageInput" />
+          <button class="btn btn-dark">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let book = [
+        {
+          title: "The Hobbit",
+          author: "Jrr Tolkien",
+          maxpages: 200,
+          onpage: 60,
+          progress: "",
+        },
+        {
+          title: "Harry Potter",
+          author: "J.K.Rowling",
+          maxpages: 250,
+          onpage: 150,
+          progress: "",
+        },
+        {
+          title: "50 Shades of Grey",
+          author: "E.L.James",
+          maxpages: 150,
+          onpage: 150,
+          progress: "",
+        },
+        {
+          title: "Don Quixote",
+          author: "Miguel de Cervantes",
+          maxpages: 350,
+          onpage: 300,
+          progress: "",
+        },
+        {
+          title: "The Hobbit",
+          author: "William Shakespeare",
+          maxpages: 550,
+          onpage: 550,
+          progress: "",
+        },
+      ];
+
+      // first exsersize
+
+      book.forEach((el) => {
+        let ul = document.querySelector("#first");
+        let li = document.createElement("li");
+        ul.appendChild(li);
+        li.classList.add("list-group-item", "list-group-item-warning", "mb-1");
+        li.innerHTML += `${el.title}, by `;
+        li.innerHTML += ` ${el.author}`;
+      });
+
+      // second exersize
+
+      book.forEach((el) => {
+        let ul = document.querySelector("#second");
+        let li = document.createElement("li");
+        ul.appendChild(li);
+        if (el.maxpages === el.onpage) {
+          li.classList.add("list-group-item", "list-group-item-info", "mb-1");
+          li.innerHTML += `${el.title}, by `;
+          li.innerHTML += ` ${el.author}`;
+          li.style.color = "green";
+        } else {
+          li.classList.add("list-group-item", "list-group-item-info", "mb-1");
+          li.innerHTML += `${el.title}, by `;
+          li.innerHTML += ` ${el.author}`;
+          li.style.color = "red";
+        }
+      });
+
+      // third exersize
+
+      let table = document.querySelector("table");
+
+      let tr = document.createElement("tr");
+      table.appendChild(tr);
+      let th = document.createElement("th");
+      let th1 = document.createElement("th");
+      let th2 = document.createElement("th");
+      let th3 = document.createElement("th");
+      let th4 = document.createElement("th");
+      tr.appendChild(th);
+      tr.appendChild(th1);
+      tr.appendChild(th2);
+      tr.appendChild(th3);
+      tr.appendChild(th4);
+      th.innerHTML += `Title `;
+      th1.innerHTML += ` Author `;
+      th2.innerHTML += `Maxpage `;
+      th3.innerHTML += ` OnPage  `;
+      th4.innerHTML += `Progress Bar`;
+
+      function move(el, width) {
+        let currentWidth = 0;
+        var intval = setInterval(() => {
+          if (currentWidth >= width) {
+            clearInterval(intval);
+            return;
+          } else {
+            currentWidth++;
+            el.style.width = currentWidth + "%";
+          }
+        }, 10);
+      }
+
+      let i = 0;
+      book.forEach((el) => {
+        let tr = document.createElement("tr");
+        table.appendChild(tr);
+
+        let td = document.createElement("td");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        let td4 = document.createElement("td");
+
+        let progressbar = document.createElement("div");
+        progressbar.className = "progressbar";
+        td4.appendChild(progressbar);
+
+        tr.appendChild(td);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+
+        td.innerHTML += `${el.title}  `;
+        td1.innerHTML += ` ${el.author} `;
+        td2.innerHTML += `${el.maxpages} `;
+        td3.innerHTML += ` ${el.onpage}  `;
+
+        el.progress = Math.round((el.onpage / el.maxpages) * 100);
+        progressbar.innerHTML += `${el.progress} %`;
+        progressbar.style.backgroundColor = "green";
+
+        move(progressbar, el.progress);
+      });
+
+      //fourth exercise
+
+      let titleInput = document.querySelector("#titleInput");
+      let authorInput = document.querySelector("#authorInput");
+      let maxpageInput = document.querySelector("#maxPageInput");
+      let onpageInput = document.querySelector("#onPageInput");
+      let btn = document.querySelector("button");
+
+      function addFunc() {
+        if (
+          titleInput.value !== "" &&
+          authorInput.value !== "" &&
+          maxpageInput.value !== "" &&
+          onpageInput.value !== ""
+        ) {
+          let titleVal = titleInput.value;
+          let authorVal = authorInput.value;
+          let maxPageVal = maxpageInput.value;
+          let OnPageVal = onpageInput.value;
+          
+         
+
+          let ul = document.querySelector("#first");
+          let li = document.createElement("li");
+          ul.appendChild(li);
+          li.classList.add(
+            "list-group-item",
+            "list-group-item-warning",
+            "mb-1"
+          );
+          li.innerHTML += `${titleInput.value}, by `;
+          li.innerHTML += ` ${authorInput.value}`;
+
+          let ul1 = document.querySelector("#second");
+          let li1 = document.createElement("li");
+          ul1.appendChild(li1);
+          if (maxpageInput.value === onpageInput.value) {
+            li1.classList.add("list-group-item", "list-group-item-info", "mb-1");
+            li1.innerHTML += `${titleInput.value}, by `;
+            li1.innerHTML += ` ${authorInput.value}`;
+            li1.style.color = "green";
+          } else {
+            li1.classList.add("list-group-item", "list-group-item-info", "mb-1");
+            li1.innerHTML += `${titleInput.value}, by `;
+            li1.innerHTML += ` ${authorInput.value}`;
+            li1.style.color = "red";
+          }
+
+          let tr = document.createElement("tr");
+          let td1 = document.createElement("td");
+          let td2 = document.createElement("td");
+          let td3 = document.createElement("td");
+          let td4 = document.createElement("td");
+          let td5 = document.createElement("td");
+
+          td1.innerHTML += titleVal;
+          td2.innerHTML += authorVal;
+          td3.innerHTML += maxPageVal;
+          td4.innerHTML += OnPageVal;
+
+          let progressbar1 = document.createElement("div");
+          progressbar1.className = "progressbar";
+          td5.appendChild(progressbar1);
+
+          table.appendChild(tr);
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          tr.appendChild(td5);
+
+          book.progress = Math.round(
+            (onpageInput.value / maxpageInput.value) * 100
+          );
+
+          progressbar1.innerHTML += `${book.progress} %`;
+          progressbar1.style.backgroundColor = "green";
+
+          let books = {
+          title: titleVal,
+          author: authorVal,
+          maxpages: maxPageVal ,
+          onpage: OnPageVal,
+          }
+          book.push(books);
+          console.log(book)
+
+
+
+          titleInput.value = "";
+          authorInput.value = "";
+          maxpageInput.value = "";
+          onpageInput.value = "";
+        
+          move(progressbar1, book.progress);
+        } else {
+          titleInput.value = "";
+          authorInput.value = "";
+          maxpageInput.value = "";
+          onpageInput.value = "";
+        }
+      }
+
+      btn.addEventListener("click", addFunc);
+      console.log(book);
+    </script>
+  </body>
+</html>
