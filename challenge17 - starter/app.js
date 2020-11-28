@@ -7,17 +7,14 @@ $(function () {
   let raceCar = $(window).width() - carWidth;
   let span = $("#count");
 
- 
   btnStart.on("click", function () {
-   
     let raceTime1 = Math.floor(Math.random() * 5000 + 1);
     let raceTime2 = Math.floor(Math.random() * 5000 + 1);
 
     let finish = false;
     let place = "first";
-  
+
     function check() {
-      
       if (finish == false) {
         finish = true;
       } else {
@@ -52,12 +49,14 @@ $(function () {
             raceTime1,
             function () {
               check();
-              $('place').css('color', 'red');
+              $("place").css("color", "red");
               $("#finish").css("display", "block");
               btnStart.removeAttr("disabled");
               btnAgain.removeAttr("disabled");
               $(".table").append(
-                `<tr><th>"Finished in : ${place}  place with a time of : ${raceTime1} miliseconds </th></tr>`
+                `<tr><th>"Finished in :  <span class="text-danger
+                font-weight-bold">${place}</span>   place with a time of : <span
+                class="text-white font-weight-bold">${raceTime1}</span> miliseconds </th></tr>`
               );
             }
           );
@@ -68,12 +67,13 @@ $(function () {
             raceTime2,
             function () {
               check();
-              $('place').css('color', 'red');
+              $("place").css("color", "red");
               $("#finish").css("display", "block");
               btnStart.removeAttr("disabled");
               btnAgain.removeAttr("disabled");
               $(".table2").append(
-                `<tr><th>"Finished in : ${place} place with a time of : ${raceTime2} miliseconds </th></tr>`
+                `<tr><th>"Finished in : <span class="text-white
+                font-weight-bold">${place}</span> place with a time of : <span class="text-danger font-weight-bold">${raceTime2}</span>  miliseconds </th></tr>`
               );
             }
           );
@@ -82,52 +82,53 @@ $(function () {
       }
     }, 1000);
 
-    
     //  SET LOCAL STORAGE
-    let placeFirstCar = '';
-    let placeSecondCar = '';
+    let placeFirstCar = "";
+    let placeSecondCar = "";
 
-    if(raceTime1 < raceTime2){
-      placeFirstCar = 'first'
-      placeSecondCar = 'second'
-    }else{
-      placeFirstCar = 'second'
-      placeSecondCar = 'first'
-    };
+    if (raceTime1 < raceTime2) {
+      placeFirstCar = "first";
+      placeSecondCar = "second";
+    } else {
+      placeFirstCar = "second";
+      placeSecondCar = "first";
+    }
 
     let obj = {
       carOneTime: raceTime1,
       carTwoTime: raceTime2,
-      placeFirstCar:placeFirstCar,
-      placeSecondCar:placeSecondCar
+      placeFirstCar: placeFirstCar,
+      placeSecondCar: placeSecondCar,
     };
     // console.log(obj);
-    
+
     let objString = JSON.stringify(obj);
 
     localStorage.setItem("all", objString);
   });
 
+  let allStorage = localStorage.getItem("all");
+  // console.log(allStorage);
 
-    let allStorage = localStorage.getItem("all");
-    // console.log(allStorage);
+  let allStorageToObj = JSON.parse(allStorage);
+  // console.log(allStorageToObj);
 
-    let allStorageToObj = JSON.parse(allStorage);
-    // console.log(allStorageToObj);
+  $(".table").val(allStorageToObj.carOneTime);
+  $(".table").val(allStorageToObj.placeFirstCar);
 
-    $(".table").val(allStorageToObj.carOneTime);
-    $(".table").val(allStorageToObj.placeFirstCar);
+  $(".table1").val(allStorageToObj.carTwoTime);
+  $(".table1").val(allStorageToObj.placeSecondCar);
 
-    $(".table1").val(allStorageToObj.carTwoTime);
-    $(".table1").val(allStorageToObj.placeSecondCar);
+  $(".tableOld").append(
+    `<tr><th>"<span class="font-weight-bold">CAR 1</span> in : <span class="font-weight-bold">${allStorageToObj.placeFirstCar}</span> place with a time of : <span class="font-weight-bold">${allStorageToObj.carOneTime}</span> miliseconds </th></tr>`
+  );
+  $(".tableOld").append(
+    `<tr><th>"<span class="text-danger
+    font-weight-bold">CAR 2</span> in : <span class="text-danger
+    font-weight-bold">${allStorageToObj.placeSecondCar}</span> place with a time of : <span class="text-danger
+    font-weight-bold">${allStorageToObj.carTwoTime}</span>  miliseconds </th></tr>`
+  );
 
-    $(".tableOld").append(
-      `<tr><th>"Finished in : ${allStorageToObj.placeFirstCar} place with a time of : ${allStorageToObj.carOneTime} miliseconds </th></tr>`
-    );
-    $(".tableOld").append(
-      `<tr><th>"Finished in : ${allStorageToObj.placeSecondCar} place with a time of : ${allStorageToObj.carTwoTime} miliseconds </th></tr>`
-    );
-  
   // BUTTON PLAY AGAIN
 
   btnAgain.on("click", function () {
@@ -137,5 +138,4 @@ $(function () {
     $("#carId1").text();
     span.hide();
   });
-
 });
