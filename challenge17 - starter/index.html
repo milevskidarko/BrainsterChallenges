@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car racing game</title>
+    <meta name="keywords" content="html,css,lekcii" />
+    <meta name="description" content="ova e strana za ucenje" />
+    <meta name="author" content="Kristijan Bobevski" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- Font-awesome 4.7 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body id="race">
+    <div class="container-fluid px-0">
+      <div class="row m-0">
+        <div class="col pb-4">
+          <h1 class="py-2">Car racing game</h1>
+          <button class="btn btn-outline-light mr-2" id="start">Race!</button>
+          <button class="btn btn-outline-light" id="stop">Start Over</button>
+        </div>
+      </div>
+
+      <div class="row mx-0" style="height: 80vh">
+        <div class="col main">
+          <img src="img/raceTrack.jpg" width="100%" , height="50%" />
+
+          <div class="row mx-0">
+            <div class="col">
+              <img src="img/car1.gif" class="w-25 car" id="firstCar" />
+            </div>
+          </div>
+          <div class="row mx-0">
+            <div class="col">
+              <img src="img/car2.gif" alt="" class="w-25 car" id="secondCar" />
+              <img src="img/finish.gif" id="finish" />
+              <span id="count">3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0" id="table">
+        <div class="col-6 text-left text-white">
+          <h2>Result</h2>
+          <div class="row">
+            <div class="col-6">
+              <div class="info1"><span>Car 1</span></div>
+              <div class="table"></div>
+            </div>
+
+            <div class="col-6">
+              <div class="info2"><span class="text-danger">Car 2</span></div>
+              <div class="table2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 tableOld text-left">
+          <h2>Result from your previos game</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
