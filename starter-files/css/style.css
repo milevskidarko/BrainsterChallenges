@@ -61,7 +61,6 @@ body {
 }
 .item-card {
   cursor: pointer;
-  width: 300px;
   max-height: 482px;
 }
 .item-card-title {
