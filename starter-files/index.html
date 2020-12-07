@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikes</title>
+    <meta name="keywords" content="html,css,javaScript" />
+    <meta name="description" content="Bikes" />
+    <meta name="author" content="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Font-awesome 5 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,200;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 bg-white">
+          <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-brand ml-2" href="#"
+              ><img src="./img/logo.png" id="logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BIKES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">GEAR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PARTS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">TIRES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">SERVICE-INFO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CATALOGUES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+              <div>
+                <a class="nav-a mr-3" href=""><i class="fas fa-search"></i></a>
+                <a class="nav-a mr-3" href=""
+                  ><i class="fas fa-shopping-bag"></i
+                ></a>
+              </div>
+            </div>
+          </nav>      
+  <!-- HEADER -->
+  <div class="row mx-2">
+    <div class="col border border-left-0 border-right-0 py-4">
+      <h1>BIKES</h1>
+    </div>
+  </div>
+
+  <!-- CARDS -->
+  <div class="row mt-3 mx-2">
+    <div class="col-md-2">
+      <h2>Filter by:</h2>
+      <div class="row">
+        <div class="col border border-left-0 border-right-0">
+          <ul class="navbar-nav">
+            <li class="text-uppercase listNav" id="showAll">
+              Show All<span
+                class="badge1 float-right bg-light rounded-pill px-3"
+                >0</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col border border-left-0 border-right-0">
+          <h2>Gender</h2>
+          <ul class="navbar-nav m-auto">
+            <li class="text-uppercase listNav" id="male">
+              Male<span
+                class="badge2 float-right bg-light rounded-pill px-3"
+                >0</span
+              >
+            </li>
+            <li class="text-uppercase listNav" id="female">
+              Female<span
+                class="badge3 float-right bg-light rounded-pill px-3"
+                >0</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col border border-left-0 border-right-0 px-0">
+        <h2>Brand</h2>
+        <ul class="navbar-nav">
+          <li class="text-uppercase listNav" id="leGrand">
+            LE GRAND BIKES<span
+              class="badge4 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="kross">
+            KROSS<span class="badge5 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="explorer">
+            EXPLORER<span
+              class="badge6 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="visitor">
+            VISITOR<span
+              class="badge7 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="pony">
+            PONY<span class="badge8 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="forse">
+            FORSE<span class="badge9 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="e-bike">
+            E-BIKES<span
+              class="badge10 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+          <li class="text-uppercase listNav" id="ideal">
+            IDEAL<span
+              class="badge11 float-right bg-light rounded-pill px-3"
+              >0</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9 offset-md-1">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row" id="cards"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL SHARE-->
+
+  <div class="row mt-5 mx-2 footer">
+    <div class="col-md-3 border border-left-0 border-top-0 border-bottom-0">
+      <h2>SOCIAL SHARE</h2>
+      <div class="row">
+        <div class="col">
+          <a href="" class="social"><i class="fab fa-facebook"></i></a>
+          <a href="" class="social"
+            ><i class="fab fa-instagram-square"></i
+          ></a>
+          <a href="" class="social"><i class="fab fa-linkedin"></i></a>
+          <a href="" class="social"
+            ><i class="fab fa-twitter-square"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 border border-left-0 border-top-0 border-bottom-0">
+      <h2>EVENT INFO</h2>
+      <div class="row">
+        <div class="col">
+          <ul class="navbar-nav">
+            <li><a href="">Enter now</a></li>
+            <li><a href="">Event Info</a></li>
+            <li><a href="">Course Maps</a></li>
+            <li><a href="">Race Pack</a></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Am I Registered?</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 border border-left-0 border-top-0 border-bottom-0">
+      <h2>REGISTRATION</h2>
+      <div class="row">
+        <div class="col">
+          <ul class="navbar-nav">
+            <li><a href="">Volunteers</a></li>
+            <li><a href="">Galery</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Service Plus</a></li>
+            <li><a href="">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 border border-left-0 border-top-0 border-bottom-0">
+      <h2>SCHEDULE</h2>
+      <div class="row">
+        <div class="col">
+          <ul class="navbar-nav">
+            <li><a href="">Galery</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Video</a></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Results</a></li>
+            <li><a href="">Volunteers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+    
+
+
+
+
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
