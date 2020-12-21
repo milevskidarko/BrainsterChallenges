@@ -21,7 +21,7 @@ class Card extends Component {
                     />
                   </div>
                   <div className="card-body bg-warning">
-                    <h3 className="item-card-title">{card.name}</h3>
+                    <h5 className="item-card-title">{card.name}</h5>
                     <p className="card-text">{card.price} $</p>
                   </div>
                 </div>

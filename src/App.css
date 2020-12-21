@@ -86,3 +86,23 @@ body {
 .card {
   border: 2px solid rgba(0, 0, 0, 0.125);
 }
+.card-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+h5 {
+  min-height: 48px;
+  font-size: 1.25rem;
+}
+h5.card-text{
+  min-height:48px;
+}
+
+@media only screen and (max-width: 1366px) {
+  .nav-item .nav-link {
+    font-size: 15px;
+  }
+}

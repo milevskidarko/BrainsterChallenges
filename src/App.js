@@ -39,14 +39,14 @@ function App() {
             <div className="text-center">loading...</div>
           ) : (
             <div className="row mt-3">
-              <div className="col-md-2">
+              <div className="col-md-3">
                 <Filter
                   filters={filters}
                   setFilter={setFilters}
                   allcards={allcards}
                 />
               </div>
-              <div className="col-md-9 offset-md-1">
+              <div className="col-md-8 offset-md-1">
                 <Card cards={cards} />
               </div>
             </div>
