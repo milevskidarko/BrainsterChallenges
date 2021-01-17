@@ -1,0 +1,53 @@
+.Header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.card-overlay h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.border-bottom {
+  border-bottom: 10px solid lightgreen !important;
+}
+.BrowseArtist img {
+  width: 100%;
+  position: relative;
+}
+.BrowseArtist p {
+  position: absolute;
+  margin-top: -40px;
+  background-color: #0275d8;
+  color: white;
+}
+.ArtistPage img {
+  width: 100% !important;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-overlay h2 {
+    font-size: 18px !important;
+  }
+  .BrowseArtist p {
+    font-size: 9px;
+    margin-top: -29px;
+  }
+  .BrowseTitle {
+    font-size: 20px;
+  }
+}
